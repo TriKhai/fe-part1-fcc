@@ -14,23 +14,23 @@
         </header>
         <form action="" id="survey-form">
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" placeholder="Enter your name" id="name">
+                <label id="name-label" for="name">Name</label>
+                <input required class="form-control" type="text" placeholder="Enter your name" id="name">
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" placeholder="Enter your Email" id="email">
+                <label id="email-label" for="email">Email</label>
+                <input required class="form-control" type="email" placeholder="Enter your Email" id="email">
             </div>
             <div class="form-group">
-                <label for="number">
+                <label id="number-label" for="number">
                     Age
                     <span class="clue">(optional)</span>
                 </label>
-                <input type="number" placeholder="Enter your name" id="number">
+                <input class="form-control" type="number" placeholder="Enter your name" id="number" min="13" max="120">
             </div>
             <div class="form-group">
                 <label for="dropdown">Which option best describes your current role?</label>
-                <select name="" id="dropdown">
+                <select class="form-control" name="" id="dropdown">
                     <option value="">Select current role</option>
                     <option value="student">Student</option>
                     <option value="job">Full time job</option>
@@ -41,13 +41,16 @@
             </div>
             <div class="form-group">
                 <p>Would you recommend freeCodeCamp to a friend?</p>
-                <label for="input-radio"><input type="radio" placeholder="Enter your name" id="input-radio"> Definitely</label>
-                <label for="input-radio"><input type="radio" placeholder="Enter your name" id="input-radio"> Maybe</label>
-                <label for="input-radio"><input type="radio" placeholder="Enter your name" id="input-radio"> Not sure</label>
+                <label for="input-radio"><input type="radio" placeholder="Enter your name" id="input-radio" name="radio-input" value="definitely"> Definitely</label>
+                <label for="input-radio"><input type="radio" placeholder="Enter your name" id="input-radio" name="radio-input" value="maybe"> Maybe</label>
+                <label for="input-radio"><input type="radio" placeholder="Enter your name" id="input-radio" name="radio-input" value="not"> Not sure</label>
             </div>
             <div class="form-group">
-                <p>What would you like to see improved?</p>
-                <span class="clue">(Check all that apply)</span>
+                <p>
+                    What would you like to see improved?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+                
                 <label><input type="checkbox" class="input-check" value="fe-project"> Front-end Projects</label>
                 <label><input type="checkbox" class="input-check" value="be-project"> Back-end Projects</label>
                 <label><input type="checkbox" class="input-check" value="data-visualization"> Data Visualization</label>
@@ -59,15 +62,13 @@
                 <label><input type="checkbox" class="input-check" value="wiki"> Wiki</label>
                 <label><input type="checkbox" class="input-check" value="forum"> Forum</label>
                 <label><input type="checkbox" class="input-check" value="addtitional-courses"> Additional Courses</label>
-                </div>
             </div>
-            
             <div class="form-group">
                 <p>Any comments or suggestions?</p>
                 <textarea name="" id="textarea" cols="30" rows="10" class="input-textarea" placeholder="Enter your comment here..."></textarea>
             </div>
             <div class="form-group">
-                <button type="submit">Submit</button>
+                <button id="submit" type="submit" class="submit-btn">Submit</button>
             </div>
         </form>
     </div>
